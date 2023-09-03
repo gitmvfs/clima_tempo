@@ -26,10 +26,10 @@ function App() {
         nome_estado = {clima_cidade.location.region}
         temp_atual = {clima_cidade.current.temp_c}
       
-        img_madrugada = {clima_cidade.forecast.forecastday[0].hour[2].condition.icon} // Pega o icone do tempo das 3:00 da madrugada
-        img_manha = {clima_cidade.forecast.forecastday[0].hour[7].condition.icon} // Pega o icone do tempo das 8:00 da manhã
-        img_tarde = {clima_cidade.forecast.forecastday[0].hour[13].condition.icon} // Pega o icone do tempo das 14:00 da tarde
-        img_noite = {clima_cidade.forecast.forecastday[0].hour[19].condition.icon} // Pega o icone do tempo das 20:00 da noite
+        img_madrugada = {clima_cidade.forecast.forecastday[0].hour[2].condition.icon} // Pega o icone do tempo das 2:00 da madrugada
+        img_manha = {clima_cidade.forecast.forecastday[0].hour[7].condition.icon} // Pega o icone do tempo das 7:00 da manhã
+        img_tarde = {clima_cidade.forecast.forecastday[0].hour[13].condition.icon} // Pega o icone do tempo das 13:00 da tarde
+        img_noite = {clima_cidade.forecast.forecastday[0].hour[19].condition.icon} // Pega o icone do tempo das 19:00 da noite
         temp_max = {clima_cidade.forecast.forecastday[0].day.maxtemp_c}
         temp_min = {clima_cidade.forecast.forecastday[0].day.mintemp_c}
       
@@ -42,8 +42,8 @@ function App() {
     <div className="App">
       <input
       placeholder='Digite o nome da cidade'
-      value={valorInput}
-      onChange={handleInputChange}
+      value={valorInput} 
+      onChange={handleInputChange} // Passa as mudanças do input para o handle (e o handle guarda na variavel valorInput)
       />
       <button onClick={() => Pesquisa(valorInput)}>Pesquisar Cidade</button>
       {cidade !== null && cidade}
