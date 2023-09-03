@@ -16,7 +16,7 @@ function App() {
 
  async function Pesquisa(valorInput){
     
-    const dados_api = await api.get('forecast.json?key=2d31d2b35db14ad690150238230309&q='+ valorInput) // Retorna um JSON com diversos valores
+    const dados_api = await api.get('forecast.json?key=2d31d2b35db14ad690150238230309&q='+ valorInput.toLowerCase()) // Retorna um JSON com diversos valores
     const clima_cidade = dados_api.data //Pega apenas o 'data' do JSON retornado
 
    
